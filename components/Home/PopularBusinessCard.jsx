@@ -9,6 +9,7 @@ export default function PopularBusinessCard({business}) {
         padding: 10,
         backgroundColor: '#fff',
         borderRadius: 15,
+        
     }}>
       <Image source={{uri:business?.imageUrl}}
         style={{
@@ -18,7 +19,7 @@ export default function PopularBusinessCard({business}) {
         }}
       />
 
-      <View style={{marginTop: 7, gap: 5}}>
+      <View style={{marginTop: 7, gap: 5,}}>
         <Text style={{
             fontFamily: 'outfit-bold',
             fontSize: 17,

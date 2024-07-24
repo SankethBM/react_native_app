@@ -52,7 +52,7 @@ export default function Category() {
                 <CategoryItem 
                 category = {item} 
                 key={index} 
-                onCategoryPress={(category) => router.push('/businesslist' + item.name)}
+                onCategoryPress={(category) => router.push('/businesslist/' + item.name)}
                 />
             )}
         />
