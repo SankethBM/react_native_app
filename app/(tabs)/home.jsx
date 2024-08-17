@@ -1,34 +1,30 @@
-import { View, Text, ScrollView } from 'react-native'
-import React from 'react'
-import Header from '../../components/Home/Header'
-import Slider from '../../components/Home/Slider'
-import Category from '../../components/Home/Category'
-import PopularBusiness from '../../components/Home/PopularBusiness'
+import { View, Text, ScrollView } from "react-native";
+import React from "react";
+import Header from "../../components/Home/Header";
+import Slider from "../../components/Home/Slider";
+import Category from "../../components/Home/Category";
+import PopularBusiness from "../../components/Home/PopularBusiness";
 
 export default function home() {
   return (
     <ScrollView>
-      
-    {/* Header */}
+      {/* Header */}
 
-    <Header/>
+      <Header />
 
-    {/* Sliders */}
+      {/* Sliders */}
 
-    <Slider/>
+      <Slider />
 
-    {/* Category */}
+      {/* Category */}
 
-    <Category/>
+      <Category />
 
-    {/* Popular business list */}
+      {/* Popular business list */}
 
-    <PopularBusiness/>
+      <PopularBusiness />
 
-    <View style={{height: 50}}>
-
-    </View>
-
+      <View style={{ height: 50 }}></View>
     </ScrollView>
-  )
+  );
 }

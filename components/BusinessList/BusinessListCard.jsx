@@ -1,60 +1,72 @@
-import { View, Text, Image, TouchableOpacity } from 'react-native'
-import React from 'react'
-import { Colors } from '../../constants/Colors'
-import { Ionicons } from '@expo/vector-icons'
-import { useRouter } from 'expo-router'
+import { View, Text, Image, TouchableOpacity } from "react-native";
+import React from "react";
+import { Colors } from "../../constants/Colors";
+import { Ionicons } from "@expo/vector-icons";
+import { useRouter } from "expo-router";
 
-export default function BusinessListCard({business}) {
-
+export default function BusinessListCard({ business }) {
   const router = useRouter();
 
   return (
-    <TouchableOpacity style={{
+    <TouchableOpacity
+      style={{
         padding: 10,
         margin: 10,
         borderRadius: 15,
-        backgroundColor: '#fff',
-        display: 'flex',
-        flexDirection: 'row',
+        backgroundColor: "#fff",
+        display: "flex",
+        flexDirection: "row",
         gap: 10,
-    }}  
-      onPress={() => router.push('/businessdetail/' + business.id)}
+      }}
+      onPress={() => router.push("/businessdetail/" + business.id)}
     >
-      <Image source={{uri: business.imageUrl}}
+      <Image
+        source={{ uri: business.imageUrl }}
         style={{
-            width: 120,
-            height: 120,
-            borderRadius: 15,
+          width: 120,
+          height: 120,
+          borderRadius: 16,
         }}
       />
 
-      <View style={{
-        flex: 1,
-        gap: 7,
-      }}>
-
-        <Text style={{
-            fontFamily: 'outfit-bold',
+      <View
+        style={{
+          flex: 1,
+          gap: 7,
+        }}
+      >
+        <Text
+          style={{
+            fontFamily: "outfit-bold",
             fontSize: 20,
-        }}>{business.name}</Text>
+          }}
+        >
+          {business.name}
+        </Text>
 
-        <Text style={{
-            fontFamily: 'outfit',
+        <Text
+          style={{
+            fontFamily: "outfit",
             color: Colors.GRAY,
             fontSize: 15,
-        }}><Ionicons name="location" size={19} color={Colors.GRAY} />{business.address}</Text>
+          }}
+        >
+          <Ionicons name="location" size={19} color={Colors.GRAY} />
+          {business.address}
+        </Text>
 
-        <View style={{display: 'flex', flexDirection: 'row', gap: 5}} >
-            <Image source={require('./../../assets/images/star.png')}  style={{
-                width: 15,
-                height: 15,
-            }}/>
+        <View style={{ display: "flex", flexDirection: "row", gap: 5 }}>
+          <Image
+            source={require("./../../assets/images/star.png")}
+            style={{
+              width: 15,
+              height: 15,
+            }}
+          />
 
-            <Text style={{fontFamily:'outfit'}}>4.5</Text>
-
+          <Text style={{ fontFamily: "outfit" }}>4.5</Text>
         </View>
       </View>
-
     </TouchableOpacity>
-  )
+  );
 }
