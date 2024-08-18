@@ -39,7 +39,7 @@ export default function ActionButton({ business }) {
   ];
 
   const OnPressHandle = (item) => {
-    if (item.name == "share") {
+    if (item.name == "Share") {
       Share.share({
         message:
           business?.name +
