@@ -7,7 +7,7 @@ import PopularBusiness from "../../components/Home/PopularBusiness";
 
 export default function home() {
   return (
-    <ScrollView>
+    <ScrollView showsVerticalScrollIndicator={false}>
       {/* Header */}
 
       <Header />

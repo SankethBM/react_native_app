@@ -108,6 +108,7 @@ export default function AddBusiness() {
   };
   return (
     <ScrollView
+      showsVerticalScrollIndicator={false}
       style={{
         padding: 20,
       }}
